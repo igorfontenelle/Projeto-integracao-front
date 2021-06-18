@@ -1,14 +1,10 @@
 package ch.project.controller;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import ch.project.MainApp;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
-import javafx.scene.control.Label;
 import javafx.scene.control.TitledPane;
 import javafx.scene.control.TreeItem;
 import javafx.scene.control.TreeView;
@@ -31,7 +27,6 @@ public class RootLayoutController {
 	private MainApp mainApp;
 	
 	public void setMainApp(MainApp mainApp) {
-		// TODO Auto-generated method stub
 		this.mainApp = mainApp;
 	}
 	
@@ -72,17 +67,17 @@ public class RootLayoutController {
 		if (s.equals("Ares")) {
 			TreeItem<String> lineItem = new TreeItem<>("Ares TB");
 			
-			TreeItem<String> branchItem1 = new TreeItem<>("Ares 7021");
-			TreeItem<String> branchItem2 = new TreeItem<>("Ares 7031");
-			TreeItem<String> branchItem3 = new TreeItem<>("Ares 7023");
+			TreeItem<String> branchItem1 = new TreeItem<>("Ares TB 7021");
+			TreeItem<String> branchItem2 = new TreeItem<>("Ares TB 7031");
+			TreeItem<String> branchItem3 = new TreeItem<>("Ares TB 7023");
 			lineItem.getChildren().addAll(branchItem1, branchItem2, branchItem3);
 			rootItem.getChildren().add(lineItem);
 			
 			TreeItem<String> lineItem1 = new TreeItem<>("Ares THS");
 			
-			lineItem1.getChildren().add(new TreeItem<>("Ares 8023 15"));
-			lineItem1.getChildren().add(new TreeItem<>("Ares 8023 200"));
-			lineItem1.getChildren().add(new TreeItem<>("Ares 8023 2,5"));
+			lineItem1.getChildren().add(new TreeItem<>("Ares THS 8023 15"));
+			lineItem1.getChildren().add(new TreeItem<>("Ares THS 8023 200"));
+			lineItem1.getChildren().add(new TreeItem<>("Ares THS 8023 2,5"));
 			rootItem.getChildren().add(lineItem1);
 			
 			treeViewLines.setRoot(rootItem);
@@ -119,9 +114,6 @@ public class RootLayoutController {
 			
 			treeViewLines.setRoot(rootItem);
 		}
-		
-		//treeViewLines.setShowRoot(false);
-		
 	}
 
 }
