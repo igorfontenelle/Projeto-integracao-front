@@ -1,9 +1,9 @@
-package ch.project;
+package projetoIntegracaoFront;
 
 import java.io.IOException;
 
-import ch.project.MainApp;
-import ch.project.controller.RootLayoutController;
+import projetoIntegracaoFront.MainApp;
+import projetoIntegracaoFront.controller.RootLayoutController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -48,7 +48,6 @@ public class MainApp extends Application {
 		catch (IOException e) {
 			e.printStackTrace();
 		}
-        
         
 	}
 }
