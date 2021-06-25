@@ -1,9 +1,9 @@
-package projetoIntegracaoFront;
+package br.com.eletra;
 
 import java.io.IOException;
 
-import projetoIntegracaoFront.MainApp;
-import projetoIntegracaoFront.controller.RootLayoutController;
+import br.com.eletra.MainApp;
+import br.com.eletra.controller.RootLayoutController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;

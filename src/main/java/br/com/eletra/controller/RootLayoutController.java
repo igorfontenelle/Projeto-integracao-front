@@ -1,9 +1,11 @@
-package projetoIntegracaoFront.controller;
+package br.com.eletra.controller;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import projetoIntegracaoFront.MainApp;
+import br.com.eletra.MainApp;
+import br.com.eletra.model.Ares;
+import br.com.eletra.model.Cronos;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -12,8 +14,6 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TitledPane;
 import javafx.scene.control.TreeItem;
 import javafx.scene.control.TreeView;
-import projetoIntegracaoBack.model.Ares;
-import projetoIntegracaoBack.model.Cronos;
 
 public class RootLayoutController {
 
