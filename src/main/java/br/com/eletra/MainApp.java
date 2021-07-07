@@ -1,9 +1,17 @@
 package br.com.eletra;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 
 import br.com.eletra.MainApp;
 import br.com.eletra.controller.RootLayoutController;
+import br.com.eletra.dao.MeasurerJpaDAO;
+import br.com.eletra.model.MeasurerModel;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
