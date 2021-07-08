@@ -1,9 +1,8 @@
-package br.com.eletra.controller;
+package main.java.controller;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import br.com.eletra.MainApp;
 import br.com.eletra.dao.MeasurerJpaDAO;
 import br.com.eletra.model.MeasurerModel;
 import javafx.collections.FXCollections;
@@ -11,7 +10,6 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
-import javafx.scene.control.Label;
 import javafx.scene.control.TitledPane;
 import javafx.scene.control.TreeItem;
 import javafx.scene.control.TreeView;
@@ -32,12 +30,6 @@ public class RootLayoutController {
 	
 	@FXML
 	private Button btnReset;
-	
-	private MainApp mainApp;
-	
-	public void setMainApp(MainApp mainApp) {
-		this.mainApp = mainApp;
-	}
 	
 	@FXML
 	public void initialize() { 
