@@ -7,6 +7,7 @@
 <properties>
     	<maven.compiler.target>1.8</maven.compiler.target>
     	<maven.compiler.source>1.8</maven.compiler.source>
+    	<resteasy.version>3.0.14.Final</resteasy.version>
 </properties>
 
 <build>
@@ -77,6 +78,24 @@
  	 	<artifactId>projetoIntegracaoBack</artifactId>
   		<version>0.0.1-SNAPSHOT</version>
 	</dependency>
+	
+	<dependency>
+		<groupId>com.measurer.apirest</groupId>
+		<artifactId>apirestMeasurer</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</dependency>
+	
+	<dependency>
+		<groupId>org.jboss.resteasy</groupId>
+		<artifactId>resteasy-client</artifactId>
+		<version>${resteasy.version}</version>
+	</dependency>
+	
+	<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>2.8.7</version>
+		</dependency>
 </dependencies>
 
 </project>
