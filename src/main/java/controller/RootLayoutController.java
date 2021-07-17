@@ -11,7 +11,6 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.TitledPane;
 import javafx.scene.control.TreeItem;
 import javafx.scene.control.TreeView;
-import main.java.model.MeasurerJpaDAO;
 import com.measurer.apirest.models.MeasurerModel;
 
 public class RootLayoutController {
@@ -48,7 +47,6 @@ public class RootLayoutController {
 	
 	ControllerApi apiController = new ControllerApi();
 	// Lista de todos as linhas, categorias e modelos de medidores
-	//List<MeasurerModel> listMeasurers = MeasurerJpaDAO.getInstance().findAll();
 	List<MeasurerModel> listMeasurers = apiController.apiGetListMeasurers();
 	// Lista de todas as linhas dos medidores
 	List<String> listLines = new ArrayList<>();

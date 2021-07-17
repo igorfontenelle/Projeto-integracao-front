@@ -44,8 +44,6 @@ public class MainApp extends Application {
 
 	public static void main(String[] args) {
 		launch(args);
-		ControllerApi apiController = new ControllerApi();
-		apiController.apiGetListMeasurers();
 		System.exit(0);
 	}
 }

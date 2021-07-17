@@ -74,14 +74,8 @@
 
 <dependencies>
 	<dependency>
-		<groupId>eletra.energy</groupId>
- 	 	<artifactId>projetoIntegracaoBack</artifactId>
-  		<version>0.0.1-SNAPSHOT</version>
-	</dependency>
-	
-	<dependency>
 		<groupId>com.measurer.apirest</groupId>
-		<artifactId>apirestMeasurer</artifactId>
+		<artifactId>Projeto-integracao-back</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</dependency>
 	

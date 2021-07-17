@@ -16,8 +16,6 @@ import com.google.gson.reflect.TypeToken;
 import com.measurer.apirest.models.MeasurerModel;
 import com.measurer.apirest.resources.MeasurerResource;
 
-
-
 public class ControllerApi {
 	
 	public List<MeasurerModel> apiGetListMeasurers(){
