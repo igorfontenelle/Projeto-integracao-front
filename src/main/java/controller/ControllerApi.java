@@ -13,8 +13,9 @@ import org.jboss.resteasy.client.jaxrs.ResteasyWebTarget;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import com.measurer.apirest.models.MeasurerModel;
-import com.measurer.apirest.resources.MeasurerResource;
+
+import main.java.models.MeasurerModel;
+
 
 public class ControllerApi {
 	

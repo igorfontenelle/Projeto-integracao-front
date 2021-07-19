@@ -74,12 +74,6 @@
 
 <dependencies>
 	<dependency>
-		<groupId>com.measurer.apirest</groupId>
-		<artifactId>Projeto-integracao-back</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
-	</dependency>
-	
-	<dependency>
 		<groupId>org.jboss.resteasy</groupId>
 		<artifactId>resteasy-client</artifactId>
 		<version>${resteasy.version}</version>

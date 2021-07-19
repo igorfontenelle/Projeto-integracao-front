@@ -11,7 +11,8 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.TitledPane;
 import javafx.scene.control.TreeItem;
 import javafx.scene.control.TreeView;
-import com.measurer.apirest.models.MeasurerModel;
+import main.java.models.MeasurerModel;
+
 
 public class RootLayoutController {
 
