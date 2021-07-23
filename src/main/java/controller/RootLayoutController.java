@@ -17,19 +17,19 @@ import main.java.models.MeasurerModel;
 public class RootLayoutController {
 
 	@FXML
-	private ComboBox<String> cbLines;
+	public ComboBox<String> cbLines;
 	
 	@FXML
-	private TitledPane titledPaneLinhas;
+	public TitledPane titledPaneLinhas;
 	
 	@FXML
-	private TitledPane titledPaneModelos;
+	public TitledPane titledPaneModelos;
 	
 	@FXML
-	private TreeView<String> treeViewLines;
+	public TreeView<String> treeViewLines;
 	
 	@FXML
-	private Button btnReset;
+	public Button btnReset;
 	
 	@FXML
 	public void initialize() { 
