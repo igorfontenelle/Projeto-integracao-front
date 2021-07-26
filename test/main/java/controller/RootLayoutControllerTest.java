@@ -4,11 +4,13 @@ import static org.junit.Assert.*;
 import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
+import static org.hamcrest.CoreMatchers.is;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.ErrorCollector;
 import org.powermock.api.mockito.PowerMockito;
 import org.testfx.framework.junit.ApplicationTest;
 
@@ -18,16 +20,19 @@ import javafx.scene.control.TreeView;
 
 public class RootLayoutControllerTest extends ApplicationTest {
 
+	@Rule
+	public ErrorCollector error = new ErrorCollector();
+	
 	public RootLayoutController rlc;
 	
 	@Before
 	public void initTest() {
 		rlc = spy(RootLayoutController.class);
 		
-		rlc.cbLines = new ComboBox();
+		rlc.cbLines = new ComboBox<String>();
 		rlc.titledPaneLinhas = new TitledPane();
 		rlc.titledPaneModelos = new TitledPane();
-		rlc.treeViewLines = new TreeView();
+		rlc.treeViewLines = new TreeView<String>();
 	}
 	
 	@After
@@ -36,7 +41,7 @@ public class RootLayoutControllerTest extends ApplicationTest {
 	}
 	
 	@Test
-	public void testInitialize() {
+	public void testInitialize01() {
 		PowerMockito.doNothing().when(rlc).setCbLines();
 		rlc.initialize();
 		verify(rlc, times(1)).setCbLines();
@@ -44,7 +49,7 @@ public class RootLayoutControllerTest extends ApplicationTest {
 	}
 
 	@Test
-	public void testInitialize1() {
+	public void testInitialize02() {
 		PowerMockito.doNothing().when(rlc).setCbLines();
 		rlc.titledPaneModelos.setDisable(false);
 		rlc.initialize();
@@ -62,27 +67,45 @@ public class RootLayoutControllerTest extends ApplicationTest {
 	@Test
 	public void testHandleBtnReset() {
 		rlc.titledPaneLinhas.setExpanded(true);
+		rlc.titledPaneModelos.setExpanded(true);
+		rlc.titledPaneModelos.setDisable(false);
+		
+		rlc.setCbLines();
+		rlc.cbLines.getSelectionModel().selectFirst();
+		
+		rlc.handleBtnReset();
+		
+		error.checkThat(rlc.titledPaneLinhas.isExpanded(), is(false));
+		error.checkThat(rlc.titledPaneModelos.isExpanded(), is(false));
+		error.checkThat(rlc.titledPaneModelos.isDisable(), is(true));
+		error.checkThat(rlc.cbLines.getSelectionModel().isEmpty(), is(true));
+	}
+	
+	@Test
+	public void testHandleBtnReset01() {
+		rlc.titledPaneLinhas.setExpanded(true);
 		rlc.handleBtnReset();
 		assertEquals(false, rlc.titledPaneLinhas.isExpanded());
 	}
 	
 	@Test
-	public void testHandleBtnReset1() {
+	public void testHandleBtnReset02() {
 		rlc.titledPaneModelos.setExpanded(true);
 		rlc.handleBtnReset();
 		assertEquals(false, rlc.titledPaneModelos.isExpanded());
 	}
 	
 	@Test
-	public void testHandleBtnReset2() {
+	public void testHandleBtnReset03() {
 		rlc.titledPaneModelos.setDisable(false);
 		rlc.handleBtnReset();
 		assertEquals(true, rlc.titledPaneModelos.isDisabled());
 	}
 	
 	@Test
-	public void testHandleBtnReset3() {
-		rlc.cbLines.getSelectionModel().select("teste");
+	public void testHandleBtnReset04() {
+		rlc.setCbLines();
+		rlc.cbLines.getSelectionModel().selectFirst();
 		rlc.handleBtnReset();
 		assertEquals(true, rlc.cbLines.getSelectionModel().isEmpty());
 	}
